@@ -9,7 +9,7 @@ const Hero = () => {
           <div className="order-1 sm:order-2">
             <img src={carPng} alt="" />
           </div>
-          <div className="order-1 sm:order-2">
+          <div className="order-2 sm:order-1">
             <p>Effortless</p>
             <h1>Car Rental</h1>
             <p>
