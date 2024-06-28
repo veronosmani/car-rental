@@ -40,20 +40,38 @@ const CarList = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16">
           {CarListData.map((data) => {
             return (
-              <div className="space-y-3 border-2 border-gray-300 hover:border-primary p-3 rounded-xl relative group">
+              <div
+                data-aos="fade-up"
+                data-aos-delay={data.aosDelay}
+                className="space-y-3 border-2 border-gray-300 hover:border-primary p-3 rounded-xl relative group"
+              >
                 <div className="w-full h-[120px]">
-                  <img className="w-full h-[120px] object-contain sm:translate-x-8 group-hover:translate-x-16 duration-700" src={data.image} alt="" />
+                  <img
+                    className="w-full h-[120px] object-contain sm:translate-x-8 group-hover:translate-x-16 duration-700"
+                    src={data.image}
+                    alt=""
+                  />
                 </div>
                 <div className="space-y-2">
                   <h1 className="text-primary font-semibold">{data.name}</h1>
                   <div className="flex justify-between items-center text-xl font-semibold">
                     <p>${data.price} /Day</p>
-                    <a href="#">Details</a>
+                    <a className="hover:text-primary" href="#">
+                      Details
+                    </a>
                   </div>
+                  <p className="text-xl font-semibold absolute top-0 left-3">
+                    12Km
+                  </p>
                 </div>
               </div>
             );
           })}
+        </div>
+        <div className="grid place-content-center mt-8">
+          <button data-aos="fade-up" className="button-outline">
+            Get Started
+          </button>
         </div>
       </div>
     </div>
